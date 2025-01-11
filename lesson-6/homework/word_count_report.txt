@@ -1,0 +1,8 @@
+lesson-6/homework/word_count_report
+Total Words: 54
+Top 5 Words:
+how - 5
+you - 5
+question - 3
+are - 3
+answer - 2

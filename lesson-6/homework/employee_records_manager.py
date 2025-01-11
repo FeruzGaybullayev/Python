@@ -1,5 +1,5 @@
 def add_employee():
-    with open("employees.txt", "a") as file:
+    with open("lesson-6/homework/employees.txt", "a") as file:
         emp_id = input("Enter Employee ID: ")
         name = input("Enter Name: ")
         position = input("Enter Position: ")
@@ -7,12 +7,12 @@ def add_employee():
         file.write(f"{emp_id}, {name}, {position}, {salary}\n")
 
 def view_employees():
-    with open("employees.txt", "r") as file:
+    with open("lesson-6/homework/employees.txt", "r") as file:
         for line in file:
             print(line.strip())
 
 def search_employee(emp_id):
-    with open("employees.txt", "r") as file:
+    with open("lesson-6/homework/employees.txt", "r") as file:
         for line in file:
             if line.startswith(emp_id):
                 print(line.strip())
@@ -21,10 +21,10 @@ def search_employee(emp_id):
 
 def update_employee(emp_id):
     lines = []
-    with open("employees.txt", "r") as file:
+    with open("lesson-6/homework/employees.txt", "r") as file:
         lines = file.readlines()
     
-    with open("employees.txt", "w") as file:
+    with open("lesson-6/homework/employees.txt", "w") as file:
         for line in lines:
             if line.startswith(emp_id):
                 name = input("Enter new Name: ")
@@ -36,10 +36,10 @@ def update_employee(emp_id):
 
 def delete_employee(emp_id):
     lines = []
-    with open("employees.txt", "r") as file:
+    with open("lesson-6/homework/employees.txt", "r") as file:
         lines = file.readlines()
     
-    with open("employees.txt", "w") as file:
+    with open("lesson-6/homework/employees.txt", "w") as file:
         for line in lines:
             if not line.startswith(emp_id):
                 file.write(line)
